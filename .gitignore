@@ -1,0 +1,15 @@
+# Unity generated folders
+Fruit-catcher-examen/Library/
+Fruit-catcher-examen/Temp/
+Fruit-catcher-examen/Logs/
+Fruit-catcher-examen/obj/
+Fruit-catcher-examen/UserSettings/
+
+# Builds
+Fruit-catcher-examen/Build/
+Fruit-catcher-examen/Builds/
+
+# IDE files
+Fruit-catcher-examen/.vs/
+Fruit-catcher-examen/*.csproj
+Fruit-catcher-examen/*.sln
