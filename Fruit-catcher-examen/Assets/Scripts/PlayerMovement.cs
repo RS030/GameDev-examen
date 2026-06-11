@@ -14,6 +14,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private float slowSpeed = 12f;
     private bool isSlowed = false;
 
+    // Lives
+    private int lives = 3;
+    private bool isGameOver = false;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -77,6 +81,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Bomb"))
         {
+            LoseLife();
             Destroy(collision.gameObject);
         }
 
@@ -102,6 +107,29 @@ public class NewMonoBehaviourScript : MonoBehaviour
             }
         }
     }
+
+    // Lose 1 life
+    private void LoseLife()
+    {
+        lives--;
+
+        Debug.Log("Lives: " + lives);
+
+        if (lives <= 0)
+        {
+            GameOver();
+        }
+    }
+
+    // end game
+    private void GameOver()
+    {
+        isGameOver = true;
+        playerRb.linearVelocity = Vector3.zero;
+
+        Debug.Log("GAME OVER");
+    }
+
 
 
     // Slow player function
