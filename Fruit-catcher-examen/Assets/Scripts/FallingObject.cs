@@ -3,7 +3,7 @@ using UnityEngine;
 public class FallingObject : MonoBehaviour
 {
 
-    private bool isOnGround = false;
+    public bool isOnGround = false;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -30,4 +30,6 @@ public class FallingObject : MonoBehaviour
             }
         }
     }
+
+    
 }

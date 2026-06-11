@@ -58,43 +58,53 @@ public class NewMonoBehaviourScript : MonoBehaviour
         transform.position = pos;
     }
 
-    // Detects collision
+    // Detects collision and destroy
     private void OnCollisionEnter(Collision collision)
     {
-
-        // With fruit
         if (collision.gameObject.CompareTag("Fruit"))
         {
+            FallingObject fallingObject = collision.gameObject.GetComponent<FallingObject>();
+
+            if (fallingObject != null && fallingObject.isOnGround)
+            {
+                return;
+            }
+
             Destroy(collision.gameObject);
         }
 
-        // With Bomb
         if (collision.gameObject.CompareTag("Bomb"))
         {
             Destroy(collision.gameObject);
         }
-
-
-
+        
     }
 
-    private void OnCollisionStay(Collision collision)
+    // Detects fruit on ground to slow player
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Fruit") && !isSlowed)
+        if (other.CompareTag("Fruit"))
         {
-            StartCoroutine(SlowPlayer());
+            FallingObject fallingObject = other.GetComponent<FallingObject>();
+
+            if (fallingObject != null && fallingObject.isOnGround && !isSlowed)
+            {
+                StartCoroutine(SlowPlayer());
+            }
         }
     }
 
+
+    // Slow player function
+
     private System.Collections.IEnumerator SlowPlayer()
     {
-        isSlowed = true;
         speed = slowSpeed;
 
         yield return new WaitForSeconds(3f);
 
         speed = normalSpeed;
-        isSlowed = false;
     }
 
 }

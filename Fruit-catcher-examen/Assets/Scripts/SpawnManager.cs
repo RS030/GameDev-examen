@@ -4,6 +4,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] fruitPrefabs;
     public GameObject bombPrefab;
+    public GameObject powerupPrefab;
 
     private float xSpawnRange = 70f;
     private float ySpawn = 115f;
@@ -14,12 +15,14 @@ public class SpawnManager : MonoBehaviour
     private float spawnSpeedIncrease = 0.01f;
 
     private float bombSpawnTime = 2f;
+    private float powerupSpawnTime = 15f;
     private float startDelay = 2f;
 
     void Start()
     {
         Invoke("SpawnRandomFruit", startDelay);
         InvokeRepeating("SpawnBomb", startDelay + 2f, bombSpawnTime);
+        InvokeRepeating("SpawnPowerup", startDelay + 2f, powerupSpawnTime);
     }
 
     void SpawnRandomFruit()
@@ -66,6 +69,30 @@ public class SpawnManager : MonoBehaviour
         if (bombRb != null)
         {
             bombRb.linearVelocity = Vector3.down * 25f;
+        }
+    }
+
+    void SpawnPowerup()
+    {
+        float randomX = Random.Range(-xSpawnRange, xSpawnRange);
+
+        Vector3 spawnPosition = new Vector3(
+            randomX,
+            80f,
+            zSpawn
+        );
+
+        GameObject powerup = Instantiate(
+            powerupPrefab,
+            spawnPosition,
+            powerupPrefab.transform.rotation
+        );
+
+        Rigidbody powerupRb = powerup.GetComponent<Rigidbody>();
+
+        if (powerupRb != null)
+        {
+            powerupRb.linearVelocity = Vector3.down * 25f;
         }
     }
 }
