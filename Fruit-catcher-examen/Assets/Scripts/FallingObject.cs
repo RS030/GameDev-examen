@@ -28,6 +28,11 @@ public class FallingObject : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+
+            if (gameObject.CompareTag("PowerUp"))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 

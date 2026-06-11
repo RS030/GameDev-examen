@@ -267,6 +267,9 @@ MonoBehaviour:
   - {fileID: 6237532749729121806, guid: d33cbeb6b0c8378438ce8e3fd7608abe, type: 3}
   bombPrefab: {fileID: 5788922189967677346, guid: 7fa6b17979d66e74492120ef5a3f0506, type: 3}
   powerupPrefab: {fileID: 5500404746560500840, guid: 744eb861b670e6f4f82dd47e17ff357f, type: 3}
+  bombSpawnTime: 2
+  powerupSpawnTime: 5
+  cleanerPrefab: {fileID: 7147614582715690371, guid: 6cbcd473d48a44c428f823b23290b016, type: 3}
 --- !u!4 &571570691
 Transform:
   m_ObjectHideFlags: 0
@@ -691,7 +694,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 200, y: 0.1, z: 20}
+  m_LocalScale: {x: 200, y: 0.1, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

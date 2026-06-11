@@ -14,9 +14,16 @@ public class SpawnManager : MonoBehaviour
     private float minimumFruitSpawnTime = 0.6f;
     private float spawnSpeedIncrease = 0.01f;
 
-    private float bombSpawnTime = 2f;
-    private float powerupSpawnTime = 15f;
+    public float bombSpawnTime = 2f;
+    public float powerupSpawnTime = 5f;
     private float startDelay = 2f;
+
+
+    public GameObject cleanerPrefab;
+
+    private float cleanerSpawnX = -103f;
+    private float cleanerSpawnY = 3f;
+    private float cleanerSpawnZ = -5f;
 
     void Start()
     {
@@ -94,5 +101,20 @@ public class SpawnManager : MonoBehaviour
         {
             powerupRb.linearVelocity = Vector3.down * 25f;
         }
+    }
+
+    public void SpawnCleaner()
+    {
+        Vector3 spawnPosition = new Vector3(
+            cleanerSpawnX,
+            cleanerSpawnY,
+            cleanerSpawnZ
+        );
+
+        Instantiate(
+            cleanerPrefab,
+            spawnPosition,
+            cleanerPrefab.transform.rotation
+        );
     }
 }

@@ -73,11 +73,19 @@ public class NewMonoBehaviourScript : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
+        // Bomb
+
         if (collision.gameObject.CompareTag("Bomb"))
         {
             Destroy(collision.gameObject);
         }
-        
+
+        // Powerup
+        if (collision.gameObject.CompareTag("PowerUp"))
+        {
+            FindFirstObjectByType<SpawnManager>().SpawnCleaner();
+            Destroy(collision.gameObject);
+        }
     }
 
     // Detects fruit on ground to slow player
