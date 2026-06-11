@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1217032455930201368}
   - component: {fileID: 4750389913313243087}
   - component: {fileID: 1291407180878157661}
+  - component: {fileID: 6267615368009207149}
   m_Layer: 0
   m_Name: fruit1
   m_TagString: Fruit
@@ -140,3 +141,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6267615368009207149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207330299852339558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6abbf72765b38a241a3190cc0a5c455d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FallingObject

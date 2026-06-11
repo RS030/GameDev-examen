@@ -4,9 +4,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
 {
     // movement
     private float speed = 100f;
-     private float xBound = 70f;
-     private float zBound = 70f;
+    private float xBound = 70f;
+    private float zBound = 70f;
     private Rigidbody playerRb;
+
+
+    // slower
+    private float normalSpeed = 100f;
+    private float slowSpeed = 12f;
+    private bool isSlowed = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -43,7 +49,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
         else if (pos.x > xBound)
         {
             pos.x = xBound;
-        } else if (pos.z > zBound)
+        }
+        else if (pos.z > zBound)
         {
             pos.z = zBound;
         }
@@ -56,19 +63,38 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
 
         // With fruit
-        if(collision.gameObject.CompareTag("Fruit"))
+        if (collision.gameObject.CompareTag("Fruit"))
         {
             Destroy(collision.gameObject);
         }
 
         // With Bomb
-        if(collision.gameObject.CompareTag("Bomb"))
+        if (collision.gameObject.CompareTag("Bomb"))
         {
             Destroy(collision.gameObject);
         }
 
 
 
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Fruit") && !isSlowed)
+        {
+            StartCoroutine(SlowPlayer());
+        }
+    }
+
+    private System.Collections.IEnumerator SlowPlayer()
+    {
+        isSlowed = true;
+        speed = slowSpeed;
+
+        yield return new WaitForSeconds(3f);
+
+        speed = normalSpeed;
+        isSlowed = false;
     }
 
 }
