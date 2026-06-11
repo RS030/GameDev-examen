@@ -34,6 +34,25 @@ public class FallingObject : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
+        if (collision.gameObject.CompareTag("Fruit"))
+        {
+            if (gameObject.CompareTag("Fruit"))
+            {
+                Destroy(gameObject);
+            }
+
+
+            if (gameObject.CompareTag("Bomb"))
+            {
+                Destroy(gameObject);
+            }
+
+            if (gameObject.CompareTag("PowerUp"))
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     
