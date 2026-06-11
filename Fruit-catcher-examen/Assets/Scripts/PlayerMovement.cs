@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
+    private GameManager gameManager;
+
+
     // movement
     private float speed = 100f;
     private float xBound = 70f;
@@ -14,14 +17,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private float slowSpeed = 12f;
     private bool isSlowed = false;
 
-    // Lives
-    private int lives = 3;
-    private bool isGameOver = false;
-
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gameManager = FindFirstObjectByType<GameManager>();
         playerRb = GetComponent<Rigidbody>();
         playerRb.freezeRotation = true;
     }
@@ -29,6 +28,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!gameManager.isGameActive)
+        {
+            playerRb.linearVelocity = Vector3.zero;
+            return;
+        }
+
         PlayerMovement();
         MovementLimit();
     }
@@ -74,6 +79,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 return;
             }
 
+            gameManager.AddFruit();
             Destroy(collision.gameObject);
         }
 
@@ -81,7 +87,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Bomb"))
         {
-            LoseLife();
+            gameManager.LoseLife();
             Destroy(collision.gameObject);
         }
 
@@ -108,37 +114,13 @@ public class NewMonoBehaviourScript : MonoBehaviour
         }
     }
 
-    // Lose 1 life
-    private void LoseLife()
-    {
-        lives--;
-
-        Debug.Log("Lives: " + lives);
-
-        if (lives <= 0)
-        {
-            GameOver();
-        }
-    }
-
-    // end game
-    private void GameOver()
-    {
-        isGameOver = true;
-        playerRb.linearVelocity = Vector3.zero;
-
-        Debug.Log("GAME OVER");
-    }
-
-
-
     // Slow player function
 
     private System.Collections.IEnumerator SlowPlayer()
     {
         speed = slowSpeed;
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
 
         speed = normalSpeed;
     }

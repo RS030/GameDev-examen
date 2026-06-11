@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    private GameManager gameManager;
+    
     public GameObject[] fruitPrefabs;
     public GameObject bombPrefab;
     public GameObject powerupPrefab;
@@ -15,7 +17,7 @@ public class SpawnManager : MonoBehaviour
     private float spawnSpeedIncrease = 0.01f;
 
     public float bombSpawnTime = 2f;
-    public float powerupSpawnTime = 5f;
+    public float powerupSpawnTime = 10f;
     private float startDelay = 2f;
 
 
@@ -27,6 +29,8 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
+        gameManager = FindFirstObjectByType<GameManager>();
+
         Invoke("SpawnRandomFruit", startDelay);
         InvokeRepeating("SpawnBomb", startDelay + 2f, bombSpawnTime);
         InvokeRepeating("SpawnPowerup", startDelay + 2f, powerupSpawnTime);
@@ -34,6 +38,12 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnRandomFruit()
     {
+        if (!gameManager.isGameActive)
+        {
+            Invoke("SpawnRandomFruit", fruitSpawnTime);
+            return;
+        }
+
         int randomIndex = Random.Range(0, fruitPrefabs.Length);
         float randomX = Random.Range(-xSpawnRange, xSpawnRange);
 
@@ -57,6 +67,11 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnBomb()
     {
+        if (!gameManager.isGameActive)
+        {
+            return;
+        }
+
         float randomX = Random.Range(-xSpawnRange, xSpawnRange);
 
         Vector3 spawnPosition = new Vector3(
@@ -81,6 +96,11 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnPowerup()
     {
+        if (!gameManager.isGameActive)
+        {
+            return;
+        }
+
         float randomX = Random.Range(-xSpawnRange, xSpawnRange);
 
         Vector3 spawnPosition = new Vector3(
