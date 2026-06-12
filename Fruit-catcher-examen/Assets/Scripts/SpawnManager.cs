@@ -17,7 +17,7 @@ public class SpawnManager : MonoBehaviour
     private float spawnSpeedIncrease = 0.05f;
 
     public float bombSpawnTime = 2f;
-    public float powerupSpawnTime = 10f;
+    public float powerupSpawnTime = 20f;
     private float startDelay = 2f;
 
 
@@ -39,7 +39,7 @@ public class SpawnManager : MonoBehaviour
         Invoke("SpawnRandomFruit", startDelay);
         InvokeRepeating("SpawnBomb", startDelay + 5f, bombSpawnTime);
         InvokeRepeating("SpawnBomb", startDelay + 30f, bombSpawnTime);
-        InvokeRepeating("SpawnPowerup", startDelay + 30f, powerupSpawnTime);
+        InvokeRepeating("SpawnPowerup", startDelay + 1f, powerupSpawnTime);
     }
 
     void SpawnRandomFruit()

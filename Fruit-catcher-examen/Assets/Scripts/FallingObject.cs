@@ -19,6 +19,15 @@ public class FallingObject : MonoBehaviour
                 {
                     fruitRb.linearVelocity = Vector3.zero;
                     fruitRb.angularVelocity = Vector3.zero;
+                    fruitRb.useGravity = false;
+                    fruitRb.isKinematic = true;
+                }
+
+                Collider fruitCollider = GetComponent<Collider>();
+
+                if (fruitCollider != null)
+                {
+                    fruitCollider.isTrigger = true;
                 }
 
                 Destroy(gameObject, 3f);
@@ -55,5 +64,5 @@ public class FallingObject : MonoBehaviour
         }
     }
 
-    
+
 }

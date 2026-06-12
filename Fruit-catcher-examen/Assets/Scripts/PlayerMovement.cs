@@ -14,7 +14,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     // slower
     private float normalSpeed = 100f;
-    private float slowSpeed = 12f;
+    private float slowSpeed = 30f;
     private bool isSlowed = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
