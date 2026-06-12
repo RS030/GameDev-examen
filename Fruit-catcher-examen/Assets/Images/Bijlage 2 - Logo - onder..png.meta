@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -108,12 +108,342 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 218
+        width: 1784
+        height: 1791
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76fed0bd30f790e408487148d2876db6
+      internalID: -220225323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 101
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ce18c076a0dfa46aedc98139c6f77a
+      internalID: 1883307320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._2
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 3
+        width: 106
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9f32861ecae1b46be996188b63bdce
+      internalID: -1259175622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._3
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 3
+        width: 95
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a084aca52474a5449afd6bbecb2d2903
+      internalID: 778609257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._4
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 0
+        width: 103
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cefd385a4c5ec3e48b031cfbd1cb4172
+      internalID: 1540543485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._5
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 3
+        width: 106
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905a22a3d2d1a1f49a78a6b5d4d4af5e
+      internalID: -649004336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._6
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 161
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3762af2fa815be74c86948f8a6c6da6a
+      internalID: 708247387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._7
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 105
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf84996d388f5f4fa1a6552486d8dbb
+      internalID: -223712959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 102
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0a72dc523febb43ad45c03006897dd
+      internalID: 28873134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._9
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 0
+        width: 95
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e5d68897e675949932e5aed9d1378a
+      internalID: -935524838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._10
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 0
+        width: 98
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40d745b2f167a548a981fab9f1397ee
+      internalID: 1986370546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._11
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 0
+        width: 109
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba6ead6743c18443adcf13845faeb7e
+      internalID: 1294523676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._12
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 3
+        width: 98
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357239ce80fdb0a47996e3f70787cb0f
+      internalID: -427657436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._13
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 0
+        width: 106
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9d213ade0c48a418a1ef710df25ffb
+      internalID: 480964997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bijlage 2 - Logo - onder._14
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 3
+        width: 95
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4a6b015772b384f8a15ce8394bc008
+      internalID: -1590845898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b4cdbc9dffd50f74980baba7ecfbeb52
     internalID: 0
     vertices: []
     indices: 
@@ -121,8 +451,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Bijlage 2 - Logo - onder._0: -220225323
+      Bijlage 2 - Logo - onder._1: 1883307320
+      Bijlage 2 - Logo - onder._10: 1986370546
+      Bijlage 2 - Logo - onder._11: 1294523676
+      Bijlage 2 - Logo - onder._12: -427657436
+      Bijlage 2 - Logo - onder._13: 480964997
+      Bijlage 2 - Logo - onder._14: -1590845898
+      Bijlage 2 - Logo - onder._2: -1259175622
+      Bijlage 2 - Logo - onder._3: 778609257
+      Bijlage 2 - Logo - onder._4: 1540543485
+      Bijlage 2 - Logo - onder._5: -649004336
+      Bijlage 2 - Logo - onder._6: 708247387
+      Bijlage 2 - Logo - onder._7: -223712959
+      Bijlage 2 - Logo - onder._8: 28873134
+      Bijlage 2 - Logo - onder._9: -935524838
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

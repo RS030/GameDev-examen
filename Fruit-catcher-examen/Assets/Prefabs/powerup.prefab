@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5973851809396693989}
   - component: {fileID: -4934327764966208000}
   - component: {fileID: 9022911571652367691}
+  - component: {fileID: 2859882198079322038}
   m_Layer: 0
   m_Name: powerup
   m_TagString: PowerUp
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.01020264, y: -0.11825591, z: -0.0044964254, w: 0.9929206}
   m_LocalPosition: {x: 16.49, y: 8.33716, z: -9.71952}
-  m_LocalScale: {x: 10, y: 10, z: 0.1}
+  m_LocalScale: {x: 8, y: 10, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -154,3 +155,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallingObject
   isOnGround: 0
+--- !u!114 &2859882198079322038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5977895047316061690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27838cb7f1e515044aebe5b239d7f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpSpin
