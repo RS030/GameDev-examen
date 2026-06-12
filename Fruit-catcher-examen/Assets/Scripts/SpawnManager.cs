@@ -30,9 +30,15 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
+    }
+
+     public void StartSpawning()
+    {
+        CancelInvoke();
 
         Invoke("SpawnRandomFruit", startDelay);
-        InvokeRepeating("SpawnBomb", startDelay + 2f, bombSpawnTime);
+        InvokeRepeating("SpawnBomb", startDelay + 5f, bombSpawnTime);
+        InvokeRepeating("SpawnBomb", startDelay + 30f, bombSpawnTime);
         InvokeRepeating("SpawnPowerup", startDelay + 30f, powerupSpawnTime);
     }
 
@@ -40,7 +46,6 @@ public class SpawnManager : MonoBehaviour
     {
         if (!gameManager.isGameActive)
         {
-            Invoke("SpawnRandomFruit", fruitSpawnTime);
             return;
         }
 

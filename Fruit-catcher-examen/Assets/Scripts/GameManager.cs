@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
         gameOverScreen.SetActive(false);
         winScreen.SetActive(false);
 
+        FindFirstObjectByType<SpawnManager>().StartSpawning();
+
         Debug.Log("Game started");
     }
 
