@@ -1,11 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject startScreen;
     public GameObject gameOverScreen;
     public GameObject winScreen;
+
+    public TextMeshProUGUI fruitText;
+    public TextMeshProUGUI livesText;
+    public TextMeshProUGUI gameOverResultText;
+    public TextMeshProUGUI StartText;
+
 
     private int lives = 3;
     private int fruitCount = 0;
@@ -20,6 +27,13 @@ public class GameManager : MonoBehaviour
         startScreen.SetActive(true);
         gameOverScreen.SetActive(false);
         winScreen.SetActive(false);
+
+        fruitText.gameObject.SetActive(false);
+        livesText.gameObject.SetActive(false);
+
+        StartText.text = "Fruit te vangen: " + fruitNeededToWin;
+
+        UpdateUI();
     }
 
     public void StartGame()
@@ -31,6 +45,11 @@ public class GameManager : MonoBehaviour
         startScreen.SetActive(false);
         gameOverScreen.SetActive(false);
         winScreen.SetActive(false);
+
+        fruitText.gameObject.SetActive(true);
+        livesText.gameObject.SetActive(true);
+
+        UpdateUI();
 
         FindFirstObjectByType<SpawnManager>().StartSpawning();
 
@@ -46,7 +65,7 @@ public class GameManager : MonoBehaviour
 
         fruitCount++;
 
-        Debug.Log("Fruit: " + fruitCount + "/" + fruitNeededToWin);
+        UpdateUI();
 
         if (fruitCount >= fruitNeededToWin)
         {
@@ -63,7 +82,7 @@ public class GameManager : MonoBehaviour
 
         lives--;
 
-        Debug.Log("Lives: " + lives);
+        UpdateUI();
 
         if (lives <= 0)
         {
@@ -71,10 +90,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void UpdateUI()
+    {
+        fruitText.text = "Fruit: " + fruitCount + "/" + fruitNeededToWin;
+        livesText.text = "Leven: " + lives;
+    }
+
     private void GameOver()
     {
         isGameActive = false;
         gameOverScreen.SetActive(true);
+
+        fruitText.gameObject.SetActive(false);
+        livesText.gameObject.SetActive(false);
+
+        gameOverResultText.text = "Fruit gevangen: " + fruitCount + "/" + fruitNeededToWin;
 
         Debug.Log("GAME OVER");
     }
