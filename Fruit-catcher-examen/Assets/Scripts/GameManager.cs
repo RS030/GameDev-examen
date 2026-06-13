@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     private int lives = 3;
     private int fruitCount = 0;
-    private int fruitNeededToWin = 30;
+    private int fruitNeededToWin = 50;
 
     public bool isGameActive = false;
 

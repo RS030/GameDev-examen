@@ -10,10 +10,10 @@ public class SpawnManager : MonoBehaviour
 
     private float xSpawnRange = 70f;
     private float ySpawn = 115f;
-    private float zSpawn = -5f;
+    private float zSpawn = -7f;
 
     private float fruitSpawnTime = 2f;
-    private float minimumFruitSpawnTime = 0.6f;
+    private float minimumFruitSpawnTime = 0.5f;
     private float spawnSpeedIncrease = 0.05f;
 
     public float bombSpawnTime = 2f;
@@ -25,7 +25,7 @@ public class SpawnManager : MonoBehaviour
 
     private float cleanerSpawnX = -103f;
     private float cleanerSpawnY = 3f;
-    private float cleanerSpawnZ = -5f;
+    private float cleanerSpawnZ = -7f;
 
     void Start()
     {
@@ -39,7 +39,7 @@ public class SpawnManager : MonoBehaviour
         Invoke("SpawnRandomFruit", startDelay);
         InvokeRepeating("SpawnBomb", startDelay + 5f, bombSpawnTime);
         InvokeRepeating("SpawnBomb", startDelay + 30f, bombSpawnTime);
-        InvokeRepeating("SpawnPowerup", startDelay + 1f, powerupSpawnTime);
+        InvokeRepeating("SpawnPowerup", startDelay + 30f, powerupSpawnTime);
     }
 
     void SpawnRandomFruit()
