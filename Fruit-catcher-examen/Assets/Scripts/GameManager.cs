@@ -36,19 +36,21 @@ public class GameManager : MonoBehaviour
 
     public void SelectEasy()
     {
-        fruitNeededToWin = 25;
+        fruitNeededToWin = 20;
+        lives = 3;
         UpdateStartText();
     }
 
     public void SelectNormal()
     {
-        fruitNeededToWin = 50;
+        fruitNeededToWin = 40;
+        lives = 3;
         UpdateStartText();
     }
 
     public void SelectHard()
     {
-        fruitNeededToWin = 100;
+        fruitNeededToWin = 80;
         lives = 1;
         UpdateStartText();
     }
