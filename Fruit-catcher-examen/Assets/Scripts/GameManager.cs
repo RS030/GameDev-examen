@@ -49,12 +49,12 @@ public class GameManager : MonoBehaviour
     public void SelectHard()
     {
         fruitNeededToWin = 100;
+        lives = 1;
         UpdateStartText();
     }
 
     public void StartGame()
     {
-        lives = 3;
         fruitCount = 0;
         isGameActive = true;
 
@@ -114,7 +114,19 @@ public class GameManager : MonoBehaviour
     private void UpdateUI()
     {
         fruitText.text = "Fruit: " + fruitCount + "/" + fruitNeededToWin;
-        livesText.text = "Leven: " + lives;
+        livesText.text = GetHearts();
+    }
+
+    private string GetHearts()
+    {
+        string hearts = "";
+
+        for (int i = 0; i < lives; i++)
+        {
+            hearts += "♥ ";
+        }
+
+        return hearts;
     }
 
     private void GameOver()
