@@ -11,12 +11,11 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI fruitText;
     public TextMeshProUGUI livesText;
     public TextMeshProUGUI gameOverResultText;
-    public TextMeshProUGUI StartText;
-
+    public TextMeshProUGUI startText;
 
     private int lives = 3;
     private int fruitCount = 0;
-    private int fruitNeededToWin = 50;
+    private int fruitNeededToWin = 25;
 
     public bool isGameActive = false;
 
@@ -31,9 +30,26 @@ public class GameManager : MonoBehaviour
         fruitText.gameObject.SetActive(false);
         livesText.gameObject.SetActive(false);
 
-        StartText.text = "Fruit te vangen: " + fruitNeededToWin;
-
+        UpdateStartText();
         UpdateUI();
+    }
+
+    public void SelectEasy()
+    {
+        fruitNeededToWin = 25;
+        UpdateStartText();
+    }
+
+    public void SelectNormal()
+    {
+        fruitNeededToWin = 50;
+        UpdateStartText();
+    }
+
+    public void SelectHard()
+    {
+        fruitNeededToWin = 100;
+        UpdateStartText();
     }
 
     public void StartGame()
@@ -90,6 +106,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void UpdateStartText()
+    {
+        startText.text = "Fruit te vangen: " + fruitNeededToWin;
+    }
+
     private void UpdateUI()
     {
         fruitText.text = "Fruit: " + fruitCount + "/" + fruitNeededToWin;
@@ -113,6 +134,9 @@ public class GameManager : MonoBehaviour
     {
         isGameActive = false;
         winScreen.SetActive(true);
+
+        fruitText.gameObject.SetActive(false);
+        livesText.gameObject.SetActive(false);
 
         Debug.Log("YOU WIN");
     }
