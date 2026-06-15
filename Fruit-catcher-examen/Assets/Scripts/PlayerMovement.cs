@@ -22,11 +22,19 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public GameObject bombHitEffect;
     public GameObject powerUpEffect;
 
+    // sound
+    private AudioSource audioSource;
+    public AudioClip fruitCatchSound;
+    public AudioClip bombHitSound;
+    public AudioClip powerUpSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
         playerRb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
+
         playerRb.freezeRotation = true;
     }
 
@@ -96,6 +104,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 Instantiate(fruitCatchEffect, collision.transform.position, Quaternion.identity);
             }
 
+            if (fruitCatchSound != null)
+            {
+                audioSource.PlayOneShot(fruitCatchSound);
+            }
+
             Destroy(collision.gameObject);
         }
 
@@ -110,6 +123,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 Instantiate(bombHitEffect, collision.transform.position, Quaternion.identity);
             }
 
+            if (bombHitSound != null)
+            {
+                audioSource.PlayOneShot(bombHitSound);
+            }
+
             Destroy(collision.gameObject);
         }
 
@@ -121,6 +139,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
             if (powerUpEffect != null)
             {
                 Instantiate(powerUpEffect, collision.transform.position, Quaternion.identity);
+            }
+
+            if (powerUpSound != null)
+            {
+                audioSource.PlayOneShot(powerUpSound);
             }
 
             Destroy(collision.gameObject);
