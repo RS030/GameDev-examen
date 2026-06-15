@@ -6,7 +6,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
 
     // movement
-    private float speed = 100f;
+    private float speed = 120f;
     private float xBound = 70f;
     private float zBound = 70f;
     private Rigidbody playerRb;
