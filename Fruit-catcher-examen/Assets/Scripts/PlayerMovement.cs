@@ -17,6 +17,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private float slowSpeed = 30f;
     private bool isSlowed = false;
 
+    // effect
+    public GameObject fruitCatchEffect;
+    public GameObject bombHitEffect;
+    public GameObject powerUpEffect;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -70,6 +75,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Detects collision and destroy
     private void OnCollisionEnter(Collision collision)
     {
+        if (!gameManager.isGameActive)
+        {
+            return;
+        }
+
         if (collision.gameObject.CompareTag("Fruit"))
         {
             FallingObject fallingObject = collision.gameObject.GetComponent<FallingObject>();
@@ -80,6 +90,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
             }
 
             gameManager.AddFruit();
+
+            if (fruitCatchEffect != null)
+            {
+                Instantiate(fruitCatchEffect, collision.transform.position, Quaternion.identity);
+            }
+
             Destroy(collision.gameObject);
         }
 
@@ -88,6 +104,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Bomb"))
         {
             gameManager.LoseLife();
+
+            if (bombHitEffect != null)
+            {
+                Instantiate(bombHitEffect, collision.transform.position, Quaternion.identity);
+            }
+
             Destroy(collision.gameObject);
         }
 
@@ -95,6 +117,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (collision.gameObject.CompareTag("PowerUp"))
         {
             FindFirstObjectByType<SpawnManager>().SpawnCleaner();
+
+            if (powerUpEffect != null)
+            {
+                Instantiate(powerUpEffect, collision.transform.position, Quaternion.identity);
+            }
+
             Destroy(collision.gameObject);
         }
     }
@@ -103,6 +131,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!gameManager.isGameActive)
+        {
+            return;
+        }
+
         if (other.CompareTag("Fruit"))
         {
             FallingObject fallingObject = other.GetComponent<FallingObject>();
@@ -118,11 +151,13 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private System.Collections.IEnumerator SlowPlayer()
     {
+        isSlowed = true;
         speed = slowSpeed;
 
         yield return new WaitForSeconds(1f);
 
         speed = normalSpeed;
+        isSlowed = false;
     }
 
 }
