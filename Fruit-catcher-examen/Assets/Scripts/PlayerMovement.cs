@@ -135,7 +135,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (collision.gameObject.CompareTag("PowerUp"))
         {
             StartCoroutine(SlowFallingObjects());
-            
             FindFirstObjectByType<SpawnManager>().SpawnCleaner();
 
             if (powerUpEffect != null)

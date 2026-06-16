@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8318679ea5fa6bf4b88432de78729b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallSpeed
-  normalFallSpeed: 35
+  normalFallSpeed: 50
   slowFallSpeed: 8
 --- !u!1001 &6887973589312800668
 PrefabInstance:
