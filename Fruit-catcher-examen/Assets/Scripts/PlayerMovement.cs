@@ -134,6 +134,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
         // Powerup
         if (collision.gameObject.CompareTag("PowerUp"))
         {
+            StartCoroutine(SlowFallingObjects());
+            
             FindFirstObjectByType<SpawnManager>().SpawnCleaner();
 
             if (powerUpEffect != null)
@@ -181,6 +183,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
         speed = normalSpeed;
         isSlowed = false;
+    }
+
+    private System.Collections.IEnumerator SlowFallingObjects()
+    {
+        FallSpeed.isSlowFalling = true;
+
+        yield return new WaitForSeconds(5f);
+
+        FallSpeed.isSlowFalling = false;
     }
 
 }

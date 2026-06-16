@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4007761616718215898}
   - component: {fileID: 1333294829613952207}
   - component: {fileID: 1780077949377104720}
+  - component: {fileID: -1794324279132764500}
   m_Layer: 0
   m_Name: fruit2
   m_TagString: Fruit
@@ -155,6 +156,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallingObject
   isOnGround: 0
+--- !u!114 &-1794324279132764500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4371629326618864253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8318679ea5fa6bf4b88432de78729b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FallSpeed
+  normalFallSpeed: 30
+  slowFallSpeed: 8
 --- !u!1001 &8124979585234691898
 PrefabInstance:
   m_ObjectHideFlags: 0

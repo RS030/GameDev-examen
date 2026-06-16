@@ -1771,8 +1771,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.1591184, y: 1.1814669, z: 2.3680542}
-  m_Center: {x: -0.0036538125, y: 0.2574109, z: 0.24012338}
+  m_Size: {x: 2.1591184, y: 1.1814669, z: 2.1270645}
+  m_Center: {x: -0.0036538134, y: 0.25741085, z: -0.3070453}
 --- !u!23 &766877233
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1910,8 +1910,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.62, y: 2.45, z: 1.18}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.6200001, y: 1.6688223, z: 1.18}
+  m_Center: {x: 0, y: -0.39058992, z: 0}
 --- !u!82 &766877239
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3779,7 +3779,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 5
       mode: 0
       spread: 0
       speed:
@@ -3837,7 +3837,7 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 360
-      mode: 0
+      mode: 3
       spread: 0
       speed:
         serializedVersion: 2
@@ -4008,7 +4008,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 80
+        scalar: 150
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -4410,7 +4410,7 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 0
+        atime0: 45875
         atime1: 65535
         atime2: 65535
         atime3: 0
@@ -8673,7 +8673,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 2
+      value: 10
       mode: 0
       spread: 0
       speed:
@@ -8902,7 +8902,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 150
+        scalar: 300
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -9304,7 +9304,7 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 0
+        atime0: 42328
         atime1: 65535
         atime2: 65535
         atime3: 0
@@ -12830,7 +12830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1395829436
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14342,7 +14342,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 5
       mode: 0
       spread: 0
       speed:
@@ -14571,7 +14571,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 100
+        scalar: 500
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -14973,7 +14973,7 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 0
+        atime0: 44641
         atime1: 65535
         atime2: 65535
         atime3: 0
