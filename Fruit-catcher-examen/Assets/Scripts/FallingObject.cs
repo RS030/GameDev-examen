@@ -40,7 +40,7 @@ public class FallingObject : MonoBehaviour
 
             if (gameObject.CompareTag("PowerUp"))
             {
-                Destroy(gameObject);
+                Destroy(collision.gameObject);
             }
         }
 

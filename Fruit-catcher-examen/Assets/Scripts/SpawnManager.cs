@@ -3,7 +3,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     private GameManager gameManager;
-    
+
     public GameObject[] fruitPrefabs;
     public GameObject bombPrefab;
     public GameObject powerupPrefab;
@@ -16,8 +16,8 @@ public class SpawnManager : MonoBehaviour
     private float minimumFruitSpawnTime = 0.5f;
     private float spawnSpeedIncrease = 0.05f;
 
-    public float bombSpawnTime = 2f;
-    public float powerupSpawnTime = 20f;
+    private float bombSpawnTime = 2f;
+    private float powerupSpawnTime = 20f;
     private float startDelay = 2f;
 
 
@@ -32,7 +32,7 @@ public class SpawnManager : MonoBehaviour
         gameManager = FindFirstObjectByType<GameManager>();
     }
 
-     public void StartSpawning()
+    public void StartSpawning()
     {
         CancelInvoke();
 
@@ -46,6 +46,12 @@ public class SpawnManager : MonoBehaviour
     {
         if (!gameManager.isGameActive)
         {
+            return;
+        }
+
+        if (FallSpeed.isSlowFalling)
+        {
+            Invoke("SpawnRandomFruit", fruitSpawnTime);
             return;
         }
 
@@ -77,13 +83,14 @@ public class SpawnManager : MonoBehaviour
             return;
         }
 
+        if (FallSpeed.isSlowFalling)
+        {
+            return;
+        }
+
         float randomX = Random.Range(-xSpawnRange, xSpawnRange);
 
-        Vector3 spawnPosition = new Vector3(
-            randomX,
-            60f,
-            zSpawn
-        );
+        Vector3 spawnPosition = new Vector3(randomX, 60f, zSpawn);
 
         GameObject bomb = Instantiate(
             bombPrefab,
@@ -102,6 +109,11 @@ public class SpawnManager : MonoBehaviour
     void SpawnPowerup()
     {
         if (!gameManager.isGameActive)
+        {
+            return;
+        }
+
+        if (FallSpeed.isSlowFalling)
         {
             return;
         }

@@ -1300,8 +1300,6 @@ MonoBehaviour:
   - {fileID: 6237532749729121806, guid: d33cbeb6b0c8378438ce8e3fd7608abe, type: 3}
   bombPrefab: {fileID: 5788922189967677346, guid: 7fa6b17979d66e74492120ef5a3f0506, type: 3}
   powerupPrefab: {fileID: 5977895047316061690, guid: 9c0d5f829ef966947be03d3bbd574099, type: 3}
-  bombSpawnTime: 2
-  powerupSpawnTime: 5
   cleanerPrefab: {fileID: 7147614582715690371, guid: 6cbcd473d48a44c428f823b23290b016, type: 3}
 --- !u!4 &571570691
 Transform:
@@ -8673,7 +8671,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 10
+      value: 30
       mode: 0
       spread: 0
       speed:
@@ -8902,7 +8900,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 300
+        scalar: 500
         minScalar: 30
         maxCurve:
           serializedVersion: 2
