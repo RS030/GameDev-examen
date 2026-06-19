@@ -14,7 +14,7 @@ public class SpawnManager : MonoBehaviour
 
     private float fruitSpawnTime = 2f;
     private float minimumFruitSpawnTime = 0.1f;
-    private float spawnSpeedIncrease = 0.05f;
+    private float spawnSpeedIncrease = 0.03f;
 
     private float bombSpawnTime = 1f;
     private float powerupSpawnTime = 20f;
